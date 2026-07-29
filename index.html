@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f6f5f1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Aprender IA">
+  <meta name="description" content="Miniapp de estudio de Inteligencia Artificial para sesiones cortas desde el celular.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/icon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <title>Aprender IA</title>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">PLAN PERSONAL · 16 SEMANAS</p>
+        <h1>Aprender IA</h1>
+      </div>
+      <button class="icon-button" id="themeButton" aria-label="Cambiar tema" title="Cambiar tema">
+        <span aria-hidden="true">◐</span>
+      </button>
+    </header>
+
+    <main id="app" tabindex="-1"></main>
+
+    <nav class="bottom-nav" aria-label="Navegación principal">
+      <button class="nav-item is-active" data-route="home" aria-label="Inicio">
+        <span class="nav-icon" aria-hidden="true">⌂</span>
+        <span>Inicio</span>
+      </button>
+      <button class="nav-item" data-route="topics" aria-label="Temas">
+        <span class="nav-icon" aria-hidden="true">▤</span>
+        <span>Temas</span>
+      </button>
+      <button class="nav-item" data-route="favorites" aria-label="Favoritos">
+        <span class="nav-icon" aria-hidden="true">☆</span>
+        <span>Favoritos</span>
+      </button>
+      <button class="nav-item" data-route="progress" aria-label="Progreso">
+        <span class="nav-icon" aria-hidden="true">◔</span>
+        <span>Progreso</span>
+      </button>
+    </nav>
+  </div>
+
+  <dialog id="lessonDialog" class="lesson-dialog">
+    <div class="lesson-header">
+      <button class="icon-button" id="closeLesson" aria-label="Cerrar tema">←</button>
+      <div class="lesson-heading">
+        <p id="lessonKicker" class="eyebrow"></p>
+        <h2 id="lessonTitle"></h2>
+      </div>
+      <button class="icon-button" id="favoriteLesson" aria-label="Agregar a favoritos">☆</button>
+    </div>
+
+    <div id="lessonContent" class="lesson-content"></div>
+
+    <div class="lesson-footer">
+      <button class="secondary-button" id="previousPage">Anterior</button>
+      <span id="pageIndicator" class="page-indicator"></span>
+      <button class="primary-button" id="nextPage">Siguiente</button>
+    </div>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js" defer></script>
+</body>
+</html>
