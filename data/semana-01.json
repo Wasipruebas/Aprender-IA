@@ -1,0 +1,134 @@
+{
+  "week": 1,
+  "title": "Fundamentos",
+  "topics": [
+    {
+      "id": 5,
+      "slug": "machine-learning",
+      "title": "Machine learning",
+      "time": 4,
+      "summary": "Cómo una máquina aprende patrones a partir de ejemplos.",
+      "pages": [
+        {
+          "title": "Aprender desde datos",
+          "blocks": [
+            { "type": "paragraph", "text": "Machine learning es una rama de la inteligencia artificial en la que un sistema aprende patrones a partir de datos, en vez de depender solamente de reglas escritas para cada caso." },
+            { "type": "keyIdea", "text": "No aprende como una persona: ajusta parámetros para mejorar una tarea definida." }
+          ]
+        },
+        {
+          "title": "Entrenar, evaluar, usar",
+          "blocks": [
+            { "type": "paragraph", "text": "Primero se entrena el modelo con datos. Después se evalúa con casos que no vio. Finalmente se usa para procesar entradas nuevas, etapa llamada inferencia." },
+            { "type": "steps", "items": ["Entrenamiento: aprende patrones.", "Evaluación: medimos si generaliza.", "Inferencia: produce un resultado nuevo."] }
+          ]
+        },
+        {
+          "title": "Ejemplo en tu empresa",
+          "blocks": [
+            { "type": "companyExample", "text": "Con ventas históricas, un modelo podría estimar qué clientes tienen mayor probabilidad de comprar o qué productos podrían venderse la semana siguiente." },
+            { "type": "warning", "text": "Los saldos y el stock actual deben seguir calculándose con datos exactos, no con una predicción." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "slug": "deep-learning",
+      "title": "Deep learning",
+      "time": 4,
+      "summary": "Redes neuronales profundas y por qué impulsaron la IA moderna.",
+      "pages": [
+        { "title": "Una rama de machine learning", "blocks": [{ "type": "definition", "term": "Deep learning", "text": "Es machine learning basado en redes neuronales con muchas capas. Es especialmente útil para trabajar con lenguaje, imágenes, audio y patrones complejos." }] },
+        { "title": "Capas y representaciones", "blocks": [{ "type": "paragraph", "text": "Cada capa transforma la información y aprende representaciones cada vez más útiles para la tarea. En visión, por ejemplo, puede pasar de bordes a formas y luego a objetos." }] },
+        { "title": "Potente, pero exigente", "blocks": [{ "type": "paragraph", "text": "Suele requerir muchos datos, capacidad de cómputo y controles. Puede ser excelente sin que resulte fácil explicar cada decisión interna." }, { "type": "bullets", "items": ["Alta capacidad.", "Mayor costo de entrenamiento.", "Explicabilidad limitada.", "Necesidad de pruebas rigurosas."] }] }
+      ]
+    },
+    {
+      "id": 7,
+      "slug": "ia-generativa",
+      "title": "IA generativa",
+      "time": 5,
+      "summary": "Sistemas que producen texto, imágenes, audio, código y más.",
+      "pages": [
+        { "title": "Crear contenido nuevo", "blocks": [{ "type": "definition", "term": "IA generativa", "text": "Produce salidas nuevas a partir de patrones aprendidos. Puede generar texto, imágenes, audio, video, código o datos estructurados." }] },
+        { "title": "Probable no significa verdadero", "blocks": [{ "type": "paragraph", "text": "Un modelo puede escribir una respuesta clara y convincente que sea incorrecta. La calidad de la redacción no demuestra que el dato sea verdadero." }, { "type": "warning", "text": "Para cálculos, regulaciones o información crítica, hay que usar fuentes y validaciones." }] },
+        { "title": "Uso aplicado", "blocks": [{ "type": "companyExample", "text": "Puede interpretar pedidos escritos de manera variable, redactar mensajes comerciales o ayudar a programar Rodo 2.0. Las reglas exactas deben controlar precios, stock, crédito y totales." }] }
+      ]
+    },
+    {
+      "id": 8,
+      "slug": "predictiva-generativa",
+      "title": "Predictiva y generativa",
+      "time": 4,
+      "summary": "Predecir un resultado versus crear contenido.",
+      "pages": [
+        { "title": "Dos objetivos distintos", "blocks": [{ "type": "comparison", "items": [{ "label": "IA predictiva", "text": "Estima una categoría, un valor o una probabilidad." }, { "label": "IA generativa", "text": "Crea contenido nuevo." }] }] },
+        { "title": "Ejemplos rápidos", "blocks": [{ "type": "example", "text": "Predecir demanda o riesgo de atraso es predictivo. Redactar un mensaje, resumir un documento o crear una imagen es generativo." }] },
+        { "title": "La combinación más útil", "blocks": [{ "type": "paragraph", "text": "Un sistema puede predecir qué clientes probablemente compren, generar un mensaje para cada segmento y aplicar reglas de stock, margen y descuentos." }, { "type": "keyIdea", "text": "Predicción decide a quién o cuánto; generación produce el contenido." }] }
+      ]
+    },
+    {
+      "id": 9,
+      "slug": "modelos-aplicaciones-herramientas",
+      "title": "Modelos, aplicaciones y herramientas",
+      "time": 5,
+      "summary": "Diferenciar el motor, el producto y las capacidades auxiliares.",
+      "pages": [
+        { "title": "El modelo", "blocks": [{ "type": "definition", "term": "Modelo", "text": "Es el componente entrenado que transforma entradas en predicciones, clasificaciones o contenido. Es el motor de la capacidad de IA." }] },
+        { "title": "La aplicación", "blocks": [{ "type": "definition", "term": "Aplicación", "text": "Es el producto o interfaz con la que interactúa el usuario. Puede usar uno o varios modelos, una base de datos y reglas tradicionales." }] },
+        { "title": "Las herramientas", "blocks": [{ "type": "definition", "term": "Herramientas", "text": "Permiten que el sistema haga algo fuera del modelo: buscar información, calcular, consultar una base de datos, enviar un correo o ejecutar código." }, { "type": "keyIdea", "text": "ChatGPT es una aplicación; el modelo es uno de sus componentes." }] }
+      ]
+    },
+    {
+      "id": 10,
+      "slug": "modelos-abiertos-cerrados",
+      "title": "Modelos abiertos y cerrados",
+      "time": 5,
+      "summary": "Control, acceso, licencias, costos y responsabilidades.",
+      "pages": [
+        { "title": "No es una división absoluta", "blocks": [{ "type": "paragraph", "text": "Un modelo puede ser abierto en algunos aspectos y cerrado en otros. Hay que revisar si ofrece pesos, código, datos de entrenamiento, licencia y permiso de uso comercial." }] },
+        { "title": "Modelos abiertos", "blocks": [{ "type": "paragraph", "text": "Pueden dar más control, personalización y posibilidad de ejecutarlos en infraestructura propia. También exigen mantenimiento, seguridad y capacidad técnica." }] },
+        { "title": "Modelos cerrados", "blocks": [{ "type": "paragraph", "text": "Suelen ser más fáciles de usar como servicio y reciben mejoras administradas por el proveedor. A cambio, hay mayor dependencia y menos control sobre el funcionamiento interno." }, { "type": "keyIdea", "text": "La elección depende del riesgo, costo, privacidad y capacidad de mantenimiento." }] }
+      ]
+    },
+    {
+      "id": 11,
+      "slug": "sistemas-multimodales",
+      "title": "Sistemas multimodales",
+      "time": 4,
+      "summary": "Combinar texto, imágenes, audio, video y herramientas.",
+      "pages": [
+        { "title": "Más de una modalidad", "blocks": [{ "type": "definition", "term": "Sistema multimodal", "text": "Puede procesar o generar más de un tipo de contenido: texto, imagen, audio, video o datos estructurados." }] },
+        { "title": "Ejemplos cotidianos", "blocks": [{ "type": "example", "text": "Puede mirar una factura y extraer campos, escuchar un audio de WhatsApp y convertirlo en un pedido, o recibir una foto junto con instrucciones escritas." }] },
+        { "title": "No elimina la validación", "blocks": [{ "type": "paragraph", "text": "Que un sistema entienda varias modalidades no garantiza precisión. Una imagen borrosa, un audio confuso o una instrucción ambigua pueden producir errores." }, { "type": "keyIdea", "text": "La multimodalidad amplía la entrada; los controles siguen siendo necesarios." }] }
+      ]
+    },
+    {
+      "id": 12,
+      "slug": "cuando-usar-ia",
+      "title": "Cómo elegir si un problema necesita IA",
+      "time": 6,
+      "summary": "Elegir la solución más simple y confiable para cada tarea.",
+      "pages": [
+        { "title": "Primero, definir el problema", "blocks": [{ "type": "steps", "items": ["Definir qué resultado se necesita.", "Decidir cómo se mide.", "Establecer qué pasa cuando hay un error."] }] },
+        { "title": "Señales de que podría servir", "blocks": [{ "type": "bullets", "items": ["Hay lenguaje libre.", "Hay imágenes o audios.", "Existen patrones difíciles de expresar con reglas.", "Hay muchos casos repetitivos que requieren interpretación."] }] },
+        { "title": "Señales de que no hace falta", "blocks": [{ "type": "paragraph", "text": "Si la regla es exacta, simple y comprobable, suele convenir software tradicional. Sumar facturas, aplicar un porcentaje o bloquear una venta sin stock no necesita IA." }] },
+        { "title": "Soluciones híbridas", "blocks": [{ "type": "paragraph", "text": "En muchos procesos la mejor respuesta combina IA para interpretar, reglas para calcular, bases de datos para verificar y personas para decidir excepciones." }, { "type": "keyIdea", "text": "Usá IA solamente donde aporte una ventaja concreta." }] }
+      ]
+    },
+    {
+      "id": 13,
+      "slug": "riesgos-limitaciones",
+      "title": "Riesgos y limitaciones básicas",
+      "time": 6,
+      "summary": "Errores, privacidad, dependencia, costos y automatización excesiva.",
+      "pages": [
+        { "title": "Alucinaciones y omisiones", "blocks": [{ "type": "warning", "text": "Un sistema generativo puede inventar datos, omitir información o responder con seguridad aunque esté equivocado. Por eso la salida debe poder comprobarse." }] },
+        { "title": "Datos y privacidad", "blocks": [{ "type": "paragraph", "text": "La calidad depende de los datos disponibles. También hay que definir qué información puede enviarse a un proveedor y cómo se protege la información sensible." }] },
+        { "title": "Automatización excesiva", "blocks": [{ "type": "warning", "text": "Una respuesta incorrecta se vuelve más peligrosa cuando ejecuta acciones automáticamente. Las decisiones críticas necesitan límites y aprobación humana." }] },
+        { "title": "Costo y dependencia", "blocks": [{ "type": "paragraph", "text": "Hay costos de uso, integración, mantenimiento y revisión. Además, depender de un único proveedor puede dificultar una migración futura." }, { "type": "keyIdea", "text": "La pregunta no es solo si funciona, sino si es confiable, controlable y rentable." }] }
+      ]
+    }
+  ]
+}
