@@ -1,116 +1,4 @@
-const TOPICS = [
-  {
-    id: 5,
-    slug: "machine-learning",
-    title: "Machine learning",
-    time: 4,
-    summary: "Cómo una máquina aprende patrones a partir de ejemplos.",
-    pages: [
-      { title: "Aprender desde datos", body: "Machine learning es una rama de la inteligencia artificial en la que un sistema aprende patrones a partir de datos, en vez de depender solamente de reglas escritas para cada caso.", callout: "No aprende como una persona: ajusta parámetros para mejorar una tarea definida." },
-      { title: "Entrenar, evaluar, usar", body: "Primero se entrena el modelo con datos. Después se evalúa con casos que no vio. Finalmente se usa para procesar entradas nuevas, etapa llamada inferencia.", bullets: ["Entrenamiento: aprende patrones.", "Evaluación: medimos si generaliza.", "Inferencia: produce un resultado nuevo."] },
-      { title: "Ejemplo en tu empresa", body: "Con ventas históricas, un modelo podría estimar qué clientes tienen mayor probabilidad de comprar o qué productos podrían venderse la semana siguiente.", callout: "Los saldos y el stock actual deben seguir calculándose con datos exactos, no con una predicción." }
-    ]
-  },
-  {
-    id: 6,
-    slug: "deep-learning",
-    title: "Deep learning",
-    time: 4,
-    summary: "Redes neuronales profundas y por qué impulsaron la IA moderna.",
-    pages: [
-      { title: "Una rama de machine learning", body: "Deep learning es machine learning basado en redes neuronales con muchas capas. Es especialmente útil para trabajar con lenguaje, imágenes, audio y patrones complejos." },
-      { title: "Capas y representaciones", body: "Cada capa transforma la información y aprende representaciones cada vez más útiles para la tarea. En visión, por ejemplo, puede pasar de bordes a formas y luego a objetos." },
-      { title: "Potente, pero exigente", body: "Suele requerir muchos datos, capacidad de cómputo y controles. Puede ser excelente sin que resulte fácil explicar cada decisión interna.", bullets: ["Alta capacidad.", "Mayor costo de entrenamiento.", "Explicabilidad limitada.", "Necesidad de pruebas rigurosas."] }
-    ]
-  },
-  {
-    id: 7,
-    slug: "ia-generativa",
-    title: "IA generativa",
-    time: 5,
-    summary: "Sistemas que producen texto, imágenes, audio, código y más.",
-    pages: [
-      { title: "Crear contenido nuevo", body: "La IA generativa produce salidas nuevas a partir de patrones aprendidos. Puede generar texto, imágenes, audio, video, código o datos estructurados." },
-      { title: "Probable no significa verdadero", body: "Un modelo puede escribir una respuesta clara y convincente que sea incorrecta. La calidad de la redacción no demuestra que el dato sea verdadero.", callout: "Para cálculos, regulaciones o información crítica, hay que usar fuentes y validaciones." },
-      { title: "Uso aplicado", body: "Puede interpretar pedidos escritos de manera variable, redactar mensajes comerciales o ayudar a programar Rodo 2.0. Las reglas exactas deben controlar precios, stock, crédito y totales." }
-    ]
-  },
-  {
-    id: 8,
-    slug: "predictiva-generativa",
-    title: "Predictiva y generativa",
-    time: 4,
-    summary: "Predecir un resultado versus crear contenido.",
-    pages: [
-      { title: "Dos objetivos distintos", body: "La IA predictiva estima una categoría, un valor o una probabilidad. La IA generativa crea contenido nuevo." },
-      { title: "Ejemplos rápidos", body: "Predecir demanda o riesgo de atraso es predictivo. Redactar un mensaje, resumir un documento o crear una imagen es generativo." },
-      { title: "La combinación más útil", body: "Un sistema puede predecir qué clientes probablemente compren, generar un mensaje para cada segmento y aplicar reglas de stock, margen y descuentos.", callout: "Predicción decide a quién o cuánto; generación produce el contenido." }
-    ]
-  },
-  {
-    id: 9,
-    slug: "modelos-aplicaciones-herramientas",
-    title: "Modelos, aplicaciones y herramientas",
-    time: 5,
-    summary: "Diferenciar el motor, el producto y las capacidades auxiliares.",
-    pages: [
-      { title: "El modelo", body: "Un modelo es el componente entrenado que transforma entradas en predicciones, clasificaciones o contenido. Es el motor de la capacidad de IA." },
-      { title: "La aplicación", body: "La aplicación es el producto o interfaz con la que interactúa el usuario. Puede usar uno o varios modelos, una base de datos y reglas tradicionales." },
-      { title: "Las herramientas", body: "Las herramientas permiten que el sistema haga algo fuera del modelo: buscar información, calcular, consultar una base de datos, enviar un correo o ejecutar código.", callout: "ChatGPT es una aplicación; el modelo es uno de sus componentes." }
-    ]
-  },
-  {
-    id: 10,
-    slug: "modelos-abiertos-cerrados",
-    title: "Modelos abiertos y cerrados",
-    time: 5,
-    summary: "Control, acceso, licencias, costos y responsabilidades.",
-    pages: [
-      { title: "No es una división absoluta", body: "Un modelo puede ser abierto en algunos aspectos y cerrado en otros. Hay que revisar si ofrece pesos, código, datos de entrenamiento, licencia y permiso de uso comercial." },
-      { title: "Modelos abiertos", body: "Pueden dar más control, personalización y posibilidad de ejecutarlos en infraestructura propia. También exigen mantenimiento, seguridad y capacidad técnica." },
-      { title: "Modelos cerrados", body: "Suelen ser más fáciles de usar como servicio y reciben mejoras administradas por el proveedor. A cambio, hay mayor dependencia y menos control sobre el funcionamiento interno.", callout: "La elección depende del riesgo, costo, privacidad y capacidad de mantenimiento." }
-    ]
-  },
-  {
-    id: 11,
-    slug: "sistemas-multimodales",
-    title: "Sistemas multimodales",
-    time: 4,
-    summary: "Combinar texto, imágenes, audio, video y herramientas.",
-    pages: [
-      { title: "Más de una modalidad", body: "Un sistema multimodal puede procesar o generar más de un tipo de contenido: texto, imagen, audio, video o datos estructurados." },
-      { title: "Ejemplos cotidianos", body: "Puede mirar una factura y extraer campos, escuchar un audio de WhatsApp y convertirlo en un pedido, o recibir una foto junto con instrucciones escritas." },
-      { title: "No elimina la validación", body: "Que un sistema entienda varias modalidades no garantiza precisión. Una imagen borrosa, un audio confuso o una instrucción ambigua pueden producir errores.", callout: "La multimodalidad amplía la entrada; los controles siguen siendo necesarios." }
-    ]
-  },
-  {
-    id: 12,
-    slug: "cuando-usar-ia",
-    title: "Cómo elegir si un problema necesita IA",
-    time: 6,
-    summary: "Elegir la solución más simple y confiable para cada tarea.",
-    pages: [
-      { title: "Primero, definir el problema", body: "No hay que empezar preguntando qué IA usar. Primero hay que definir qué resultado se necesita, cómo se mide y qué pasa cuando hay un error." },
-      { title: "Señales de que podría servir", body: "La IA puede aportar cuando hay lenguaje libre, imágenes, audios, patrones difíciles de expresar con reglas o muchos casos repetitivos que requieren interpretación." },
-      { title: "Señales de que no hace falta", body: "Si la regla es exacta, simple y comprobable, suele convenir software tradicional. Sumar facturas, aplicar un porcentaje o bloquear una venta sin stock no necesita IA." },
-      { title: "Soluciones híbridas", body: "En muchos procesos la mejor respuesta combina IA para interpretar, reglas para calcular, bases de datos para verificar y personas para decidir excepciones.", callout: "Usá IA solamente donde aporte una ventaja concreta." }
-    ]
-  },
-  {
-    id: 13,
-    slug: "riesgos-limitaciones",
-    title: "Riesgos y limitaciones básicas",
-    time: 6,
-    summary: "Errores, privacidad, dependencia, costos y automatización excesiva.",
-    pages: [
-      { title: "Alucinaciones y omisiones", body: "Un sistema generativo puede inventar datos, omitir información o responder con seguridad aunque esté equivocado. Por eso la salida debe poder comprobarse." },
-      { title: "Datos y privacidad", body: "La calidad depende de los datos disponibles. También hay que definir qué información puede enviarse a un proveedor y cómo se protege la información sensible." },
-      { title: "Automatización excesiva", body: "Una respuesta incorrecta se vuelve más peligrosa cuando ejecuta acciones automáticamente. Las decisiones críticas necesitan límites y aprobación humana." },
-      { title: "Costo y dependencia", body: "Hay costos de uso, integración, mantenimiento y revisión. Además, depender de un único proveedor puede dificultar una migración futura.", callout: "La pregunta no es solo si funciona, sino si es confiable, controlable y rentable." }
-    ]
-  }
-];
-
+const CONTENT_URL = "data/semana-01.json";
 const STORAGE_KEY = "aprenderIAStateV1";
 const initialState = {
   route: "home",
@@ -121,6 +9,7 @@ const initialState = {
   theme: "system"
 };
 
+let TOPICS = [];
 let state = loadState();
 let activeTopic = null;
 let activePage = 0;
@@ -139,7 +28,14 @@ const toast = document.querySelector("#toast");
 
 function loadState() {
   try {
-    return { ...initialState, ...JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}") };
+    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+    return {
+      ...initialState,
+      ...saved,
+      completed: Array.isArray(saved.completed) ? saved.completed : [],
+      favorites: Array.isArray(saved.favorites) ? saved.favorites : [],
+      lastPageByTopic: saved.lastPageByTopic && typeof saved.lastPageByTopic === "object" ? saved.lastPageByTopic : {}
+    };
   } catch {
     return { ...initialState };
   }
@@ -147,6 +43,16 @@ function loadState() {
 
 function saveState() {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+}
+
+function escapeHtml(value = "") {
+  return String(value).replace(/[&<>'"]/g, character => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    "'": "&#39;",
+    '"': "&quot;"
+  })[character]);
 }
 
 function setTheme(mode = state.theme) {
@@ -166,12 +72,12 @@ function cycleTheme() {
 }
 
 function progressPercent() {
-  return Math.round((state.completed.length / TOPICS.length) * 100);
+  return TOPICS.length ? Math.round((state.completed.length / TOPICS.length) * 100) : 0;
 }
 
 function topicStatus(topic) {
   if (state.completed.includes(topic.id)) return "✓";
-  if (state.lastTopic === topic.id && state.lastPageByTopic[topic.id] > 0) return "●";
+  if (state.lastTopic === topic.id && Number(state.lastPageByTopic[topic.id]) > 0) return "●";
   return "›";
 }
 
@@ -181,16 +87,16 @@ function topicCard(topic) {
     <button class="topic-card" data-topic="${topic.id}">
       <span class="topic-number">${topic.id}</span>
       <span class="topic-copy">
-        <h3>${favorite ? "★ " : ""}${topic.title}</h3>
-        <p>${topic.time} min · ${topic.summary}</p>
+        <h3>${favorite ? "★ " : ""}${escapeHtml(topic.title)}</h3>
+        <p>${topic.time} min · ${escapeHtml(topic.summary)}</p>
       </span>
       <span class="topic-status" aria-hidden="true">${topicStatus(topic)}</span>
     </button>`;
 }
 
 function homeView() {
-  const continueTopic = TOPICS.find(t => t.id === state.lastTopic) || TOPICS[0];
-  const recent = [continueTopic, ...TOPICS.filter(t => t.id !== continueTopic.id)].slice(0, 4);
+  const continueTopic = TOPICS.find(topic => topic.id === state.lastTopic) || TOPICS[0];
+  const recent = [continueTopic, ...TOPICS.filter(topic => topic.id !== continueTopic.id)].slice(0, 4);
   return `
     <section class="hero">
       <p class="eyebrow">SEMANA 1 · FUNDAMENTOS</p>
@@ -246,7 +152,7 @@ function topicsView() {
 }
 
 function favoritesView() {
-  const favorites = TOPICS.filter(t => state.favorites.includes(t.id));
+  const favorites = TOPICS.filter(topic => state.favorites.includes(topic.id));
   return `
     <section>
       <p class="eyebrow">REPASO</p>
@@ -260,7 +166,7 @@ function favoritesView() {
 }
 
 function progressView() {
-  const remaining = TOPICS.length - state.completed.length;
+  const remaining = Math.max(TOPICS.length - state.completed.length, 0);
   return `
     <section>
       <p class="eyebrow">SEMANA 1</p>
@@ -270,7 +176,7 @@ function progressView() {
       <div class="stat-card"><strong>${progressPercent()}%</strong><span>completado</span></div>
       <div class="stat-card"><strong>${state.completed.length}</strong><span>temas listos</span></div>
       <div class="stat-card"><strong>${remaining}</strong><span>por estudiar</span></div>
-      <div class="stat-card"><strong>${TOPICS.reduce((sum,t) => sum + t.time, 0)}</strong><span>minutos totales</span></div>
+      <div class="stat-card"><strong>${TOPICS.reduce((sum, topic) => sum + topic.time, 0)}</strong><span>minutos totales</span></div>
     </section>
     <section class="section">
       <div class="progress-card">
@@ -283,7 +189,19 @@ function progressView() {
     </section>`;
 }
 
+function loadingView() {
+  return `<div class="empty-state"><strong>Cargando contenido…</strong>Preparando la Semana 1.</div>`;
+}
+
+function errorView() {
+  return `<div class="empty-state"><strong>No se pudo cargar el contenido</strong>Recargá la aplicación cuando tengas conexión. Después seguirá disponible sin conexión.</div>`;
+}
+
 function render() {
+  if (!TOPICS.length) {
+    app.innerHTML = loadingView();
+    return;
+  }
   const views = { home: homeView, topics: topicsView, favorites: favoritesView, progress: progressView };
   app.innerHTML = (views[state.route] || homeView)();
   document.querySelectorAll(".nav-item").forEach(button => {
@@ -309,6 +227,44 @@ function openTopic(id) {
   renderLessonPage();
 }
 
+function renderList(items, ordered = false) {
+  const tag = ordered ? "ol" : "ul";
+  return `<${tag}>${(items || []).map(item => `<li>${escapeHtml(item)}</li>`).join("")}</${tag}>`;
+}
+
+function renderBlock(block) {
+  if (!block || !block.type) return "";
+
+  switch (block.type) {
+    case "paragraph":
+      return `<p>${escapeHtml(block.text)}</p>`;
+    case "definition":
+      return `<div class="content-block definition-block"><strong>${escapeHtml(block.term || "Definición")}</strong><p>${escapeHtml(block.text)}</p></div>`;
+    case "bullets":
+      return `<div class="content-block">${renderList(block.items)}</div>`;
+    case "steps":
+      return `<div class="content-block steps-block">${renderList(block.items, true)}</div>`;
+    case "comparison":
+      return `<div class="comparison-grid">${(block.items || []).map(item => `<div class="comparison-item"><strong>${escapeHtml(item.label)}</strong><p>${escapeHtml(item.text)}</p></div>`).join("")}</div>`;
+    case "example":
+      return `<div class="content-block example-block"><strong>Ejemplo</strong><p>${escapeHtml(block.text)}</p></div>`;
+    case "companyExample":
+      return `<div class="content-block company-example-block"><strong>Ejemplo en tu empresa</strong><p>${escapeHtml(block.text)}</p></div>`;
+    case "warning":
+      return `<div class="lesson-callout warning-block"><strong>Atención:</strong> ${escapeHtml(block.text)}</div>`;
+    case "keyIdea":
+      return `<div class="lesson-callout"><strong>Clave:</strong> ${escapeHtml(block.text)}</div>`;
+    case "image": {
+      const src = escapeHtml(block.src);
+      const alt = escapeHtml(block.alt || "Imagen educativa");
+      const caption = block.caption ? `<figcaption>${escapeHtml(block.caption)}</figcaption>` : "";
+      return `<figure class="lesson-image"><img src="${src}" alt="${alt}" loading="lazy">${caption}</figure>`;
+    }
+    default:
+      return "";
+  }
+}
+
 function renderLessonPage() {
   const page = activeTopic.pages[activePage];
   lessonKicker.textContent = `TEMA ${activeTopic.id} · ${activeTopic.time} MIN`;
@@ -319,10 +275,8 @@ function renderLessonPage() {
     <article class="lesson-page">
       <div class="lesson-text-card">
         <span class="page-label">Idea ${activePage + 1}</span>
-        <h3>${page.title}</h3>
-        <p>${page.body}</p>
-        ${page.bullets ? `<ul>${page.bullets.map(item => `<li>${item}</li>`).join("")}</ul>` : ""}
-        ${page.callout ? `<div class="lesson-callout"><strong>Clave:</strong> ${page.callout}</div>` : ""}
+        <h3>${escapeHtml(page.title)}</h3>
+        ${(page.blocks || []).map(renderBlock).join("")}
       </div>
     </article>`;
   pageIndicator.textContent = `${activePage + 1}/${activeTopic.pages.length}`;
@@ -342,7 +296,7 @@ function nextLessonPage() {
   }
   if (!state.completed.includes(activeTopic.id)) state.completed.push(activeTopic.id);
   state.lastPageByTopic[activeTopic.id] = 0;
-  const nextTopic = TOPICS.find(t => t.id > activeTopic.id && !state.completed.includes(t.id));
+  const nextTopic = TOPICS.find(topic => topic.id > activeTopic.id && !state.completed.includes(topic.id));
   if (nextTopic) state.lastTopic = nextTopic.id;
   saveState();
   dialog.close();
@@ -387,6 +341,20 @@ function showToast(message) {
   toastTimer = setTimeout(() => toast.classList.remove("is-visible"), 1800);
 }
 
+async function loadContent() {
+  try {
+    const response = await fetch(CONTENT_URL);
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const content = await response.json();
+    if (!content || !Array.isArray(content.topics) || !content.topics.length) throw new Error("Contenido inválido");
+    TOPICS = content.topics;
+    render();
+  } catch (error) {
+    console.error("No se pudo cargar el contenido educativo", error);
+    app.innerHTML = errorView();
+  }
+}
+
 document.addEventListener("click", event => {
   const topicButton = event.target.closest("[data-topic]");
   if (topicButton) openTopic(topicButton.dataset.topic);
@@ -424,6 +392,7 @@ matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => {
 
 setTheme();
 render();
+loadContent();
 
 if ("serviceWorker" in navigator) {
   addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
