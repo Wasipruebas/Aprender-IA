@@ -1,0 +1,20 @@
+{
+  "name": "Aprender IA",
+  "short_name": "Aprender IA",
+  "description": "Plan de estudio de Inteligencia Artificial para sesiones cortas.",
+  "lang": "es-AR",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f6f5f1",
+  "theme_color": "#f6f5f1",
+  "icons": [
+    {
+      "src": "assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
