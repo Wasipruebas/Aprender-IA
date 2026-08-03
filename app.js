@@ -694,7 +694,7 @@ matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => {
 async function init() {
   setTheme();
   try {
-    const response = await fetch("data/week-1.json");
+    const response = await fetch("data/week-1.json?v=3");
     if (!response.ok) throw new Error(`No se pudo cargar el contenido (${response.status})`);
     course = await response.json();
     render();
@@ -712,5 +712,19 @@ async function init() {
 init();
 
 if ("serviceWorker" in navigator) {
-  addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
+  addEventListener("load", async () => {
+    try {
+      const registration = await navigator.serviceWorker.register("sw.js?v=3");
+      await registration.update();
+    } catch {
+      // La aplicación sigue funcionando online aunque el modo offline no esté disponible.
+    }
+  });
+
+  let refreshing = false;
+  navigator.serviceWorker.addEventListener("controllerchange", () => {
+    if (refreshing) return;
+    refreshing = true;
+    location.reload();
+  });
 }
