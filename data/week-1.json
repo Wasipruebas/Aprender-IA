@@ -1,0 +1,733 @@
+{
+  "id": "week-1",
+  "title": "Semana 1",
+  "subtitle": "Mapa general de la inteligencia artificial",
+  "description": "Aprendé a reconocer qué es IA, qué no lo es y cuándo conviene usarla en un problema real.",
+  "estimatedMinutes": 150,
+  "lessons": [
+    {
+      "id": 1,
+      "title": "Tu mapa de la IA",
+      "shortTitle": "El mapa",
+      "minutes": 7,
+      "icon": "🧭",
+      "summary": "Qué vas a poder explicar, comparar y decidir al terminar la semana.",
+      "pages": [
+        {
+          "type": "concept",
+          "kicker": "Punto de partida",
+          "title": "No venís a memorizar palabras",
+          "body": [
+            "Esta semana vas a construir un mapa mental. El objetivo es reconocer qué tipo de solución tenés delante y elegirla con criterio.",
+            "Un concepto cuenta como aprendido cuando podés explicarlo con tus palabras, aplicarlo a un caso nuevo y detectar un uso incorrecto."
+          ],
+          "callout": "Leer es el comienzo. Explicar y decidir es la evidencia."
+        },
+        {
+          "type": "steps",
+          "kicker": "Método",
+          "title": "Así se aprende cada tema",
+          "items": [
+            { "title": "Entendé", "text": "Leé una idea corta y buscá su sentido." },
+            { "title": "Conectá", "text": "Llevala a un ejemplo de El Mayorista del Sur." },
+            { "title": "Explicá", "text": "Escribí lo que entendiste sin copiar." },
+            { "title": "Comprobá", "text": "Respondé una pregunta y corregí el error." }
+          ]
+        },
+        {
+          "type": "example",
+          "kicker": "Meta de la semana",
+          "title": "La pregunta que guía todo",
+          "body": "Ante cada proceso de tu empresa vas a poder preguntarte:",
+          "items": [
+            "¿Hay una regla exacta o hace falta interpretar?",
+            "¿Qué datos necesita la solución?",
+            "¿Cómo compruebo el resultado?",
+            "¿Qué error sería grave?",
+            "¿Dónde debe decidir una persona?"
+          ]
+        },
+        {
+          "type": "check",
+          "title": "Explicalo con tus palabras",
+          "prompt": "¿Cuándo considerarías que un tema de IA está realmente aprendido?",
+          "placeholder": "Para mí, un tema está aprendido cuando...",
+          "minLength": 45,
+          "concepts": [
+            { "label": "explicar", "terms": ["explicar", "palabras", "entiendo"] },
+            { "label": "aplicar", "terms": ["aplicar", "caso", "problema", "empresa"] },
+            { "label": "comprobar", "terms": ["comprobar", "evaluar", "probar", "error"] }
+          ],
+          "minConcepts": 2,
+          "question": "¿Qué evidencia demuestra mejor que aprendiste?",
+          "options": [
+            "Abrí todas las pantallas",
+            "Puedo explicarlo y aplicarlo a un caso nuevo",
+            "Guardé la lección en favoritos"
+          ],
+          "answer": 1,
+          "explanation": "El aprendizaje se demuestra al explicar, aplicar y corregir; no por cantidad de pantallas vistas."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Qué es la inteligencia artificial",
+      "shortTitle": "Qué es IA",
+      "minutes": 9,
+      "icon": "✨",
+      "summary": "Una definición útil, sin imaginar una máquina que piensa como una persona.",
+      "pages": [
+        {
+          "type": "concept",
+          "kicker": "Idea simple",
+          "title": "Sistemas que realizan tareas complejas",
+          "body": [
+            "La inteligencia artificial es un campo de la informática que crea sistemas capaces de realizar tareas asociadas con capacidades humanas.",
+            "Entre ellas están interpretar lenguaje, reconocer patrones, clasificar, predecir, recomendar y generar contenido."
+          ],
+          "callout": "La definición describe una capacidad observable, no conciencia ni emociones."
+        },
+        {
+          "type": "compare",
+          "kicker": "Tres piezas",
+          "title": "Entrada, proceso y salida",
+          "columns": [
+            { "title": "Entrada", "text": "El dato que recibe: texto, foto, audio, números o documentos." },
+            { "title": "Proceso", "text": "El sistema aplica patrones aprendidos, reglas o ambos." },
+            { "title": "Salida", "text": "Devuelve una clasificación, predicción, recomendación o contenido." }
+          ]
+        },
+        {
+          "type": "example",
+          "kicker": "En tu distribuidora",
+          "title": "Interpretar un pedido",
+          "body": "Un cliente escribe: “mandame 2 aq pera grande y el rollo de la otra vez”. Un sistema de IA puede interpretar lenguaje variable y proponer productos posibles. Después, el catálogo y las reglas deben verificar la coincidencia antes de confirmar.",
+          "callout": "La IA interpreta; los datos exactos y una persona controlan la decisión."
+        },
+        {
+          "type": "check",
+          "title": "Definí IA sin frases vagas",
+          "prompt": "¿Qué es inteligencia artificial? Incluí una capacidad y una limitación.",
+          "placeholder": "La inteligencia artificial es... Puede... pero no...",
+          "minLength": 60,
+          "concepts": [
+            { "label": "sistema o campo", "terms": ["sistema", "informática", "tecnología", "campo"] },
+            { "label": "capacidad", "terms": ["interpret", "patrón", "clasific", "predec", "gener", "reconoc"] },
+            { "label": "límite", "terms": ["no", "puede fallar", "no entiende", "sin conciencia", "verificar"] }
+          ],
+          "minConcepts": 2,
+          "question": "¿Cuál es una tarea asociada a la IA?",
+          "options": [
+            "Aplicar siempre la fórmula precio × cantidad",
+            "Interpretar pedidos escritos de muchas maneras",
+            "Encender una luz a una hora fija"
+          ],
+          "answer": 1,
+          "explanation": "Interpretar lenguaje variable requiere reconocer patrones y contexto; las otras tareas pueden resolverse con reglas exactas."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Qué no es inteligencia artificial",
+      "shortTitle": "Qué no es",
+      "minutes": 8,
+      "icon": "🚫",
+      "summary": "Automático no significa inteligente, y convincente no significa verdadero.",
+      "pages": [
+        {
+          "type": "concept",
+          "kicker": "Sacá la magia",
+          "title": "La IA no es una persona",
+          "body": [
+            "Un sistema puede producir una respuesta útil sin tener conciencia, deseos, emociones ni comprensión humana.",
+            "También puede equivocarse con seguridad. Que una respuesta suene natural no prueba que sea correcta."
+          ],
+          "callout": "Fluidez no es comprensión. Seguridad al responder no es certeza."
+        },
+        {
+          "type": "compare",
+          "kicker": "No confundas",
+          "title": "Cuatro ideas distintas",
+          "columns": [
+            { "title": "Automático", "text": "Se ejecuta sin intervención en cada paso." },
+            { "title": "Inteligente", "text": "Interpreta, predice o genera ante variaciones." },
+            { "title": "Exacto", "text": "Sigue una regla comprobable." },
+            { "title": "Convincente", "text": "Parece correcto, aunque todavía necesita verificación." }
+          ]
+        },
+        {
+          "type": "example",
+          "kicker": "Caso real",
+          "title": "Un catálogo programado no es IA",
+          "body": "Enviar automáticamente el PDF todos los lunes a las 9 es una automatización. Si el texto promocional se adapta al tipo de cliente mediante un modelo, esa parte sí puede usar IA.",
+          "callout": "Un mismo proceso puede mezclar automatización, IA, reglas y revisión humana."
+        },
+        {
+          "type": "check",
+          "title": "Detectá la confusión",
+          "prompt": "Explicá por qué una tarea automática no necesariamente utiliza IA.",
+          "placeholder": "Una automatización puede... En cambio, la IA...",
+          "minLength": 55,
+          "concepts": [
+            { "label": "pasos o reglas", "terms": ["pasos", "regla", "program", "horario", "fijo"] },
+            { "label": "interpretación o patrones", "terms": ["interpret", "patrón", "variab", "predec", "gener"] }
+          ],
+          "minConcepts": 2,
+          "question": "Enviar una lista de precios cada lunes a las 9 es principalmente...",
+          "options": ["Machine learning", "Automatización", "IA generativa"],
+          "answer": 1,
+          "explanation": "El horario y los pasos están definidos de antemano; no hace falta interpretar ni aprender patrones."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Software, automatización e IA",
+      "shortTitle": "Elegir tecnología",
+      "minutes": 11,
+      "icon": "⚙️",
+      "summary": "Reglas exactas, flujos programados, interpretación y soluciones híbridas.",
+      "pages": [
+        {
+          "type": "compare",
+          "kicker": "Mapa práctico",
+          "title": "Tres formas de resolver",
+          "columns": [
+            { "title": "Software tradicional", "text": "Ejecuta reglas explícitas. Misma entrada, mismo resultado." },
+            { "title": "Automatización", "text": "Coordina pasos, horarios y condiciones conocidas." },
+            { "title": "IA", "text": "Ayuda cuando hay lenguaje, imágenes, predicción o variabilidad difícil de escribir en reglas." }
+          ]
+        },
+        {
+          "type": "concept",
+          "kicker": "La opción más fuerte",
+          "title": "Muchas soluciones son híbridas",
+          "body": [
+            "En un sistema híbrido cada componente hace lo que mejor sabe hacer.",
+            "La IA interpreta un pedido; el catálogo verifica productos; una fórmula calcula importes; una persona resuelve las dudas."
+          ],
+          "callout": "No le pidas probabilidad a lo que debe ser exacto."
+        },
+        {
+          "type": "steps",
+          "kicker": "Pedido por WhatsApp",
+          "title": "Un flujo bien dividido",
+          "items": [
+            { "title": "1. IA", "text": "Extrae producto, presentación y cantidad del mensaje." },
+            { "title": "2. Base de datos", "text": "Busca coincidencias reales en el catálogo." },
+            { "title": "3. Reglas", "text": "Calculan precio, stock, crédito y total." },
+            { "title": "4. Persona", "text": "Revisa ambigüedades antes de confirmar." }
+          ]
+        },
+        {
+          "type": "check",
+          "title": "Diseñá una solución híbrida",
+          "prompt": "Explicá cómo dividirías un pedido de WhatsApp entre IA, reglas y revisión humana.",
+          "placeholder": "La IA debería... Las reglas... Una persona...",
+          "minLength": 75,
+          "concepts": [
+            { "label": "IA interpreta", "terms": ["IA", "interpret", "extrae", "lenguaje"] },
+            { "label": "reglas verifican o calculan", "terms": ["regla", "calcul", "precio", "stock", "catálogo", "verific"] },
+            { "label": "revisión humana", "terms": ["persona", "humana", "revis", "aprobar", "duda"] }
+          ],
+          "minConcepts": 3,
+          "question": "¿Qué componente debería calcular el total final?",
+          "options": ["Un modelo generativo", "Una fórmula exacta", "La memoria del chat"],
+          "answer": 1,
+          "explanation": "El total es una operación exacta y verificable; corresponde a software tradicional."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Machine learning",
+      "shortTitle": "Machine learning",
+      "minutes": 11,
+      "icon": "📈",
+      "summary": "Aprender patrones desde datos para clasificar, predecir o recomendar.",
+      "visual": "assets/week-1/005-machine-learning.webp",
+      "pages": [
+        {
+          "type": "concept",
+          "kicker": "Aprender desde datos",
+          "title": "Patrones en vez de una regla para cada caso",
+          "body": [
+            "Machine learning es una rama de la IA en la que un sistema ajusta un modelo a partir de ejemplos.",
+            "Después usa los patrones aprendidos para clasificar, predecir, recomendar o detectar anomalías en casos nuevos."
+          ],
+          "callout": "Aprender significa ajustar parámetros para una tarea; no comprender como una persona."
+        },
+        {
+          "type": "steps",
+          "kicker": "Proceso básico",
+          "title": "Entrenar, evaluar, usar",
+          "items": [
+            { "title": "Datos", "text": "Ejemplos históricos relevantes y suficientemente buenos." },
+            { "title": "Entrenamiento", "text": "El sistema ajusta el modelo para encontrar patrones." },
+            { "title": "Evaluación", "text": "Se prueba con casos que no vio para medir si generaliza." },
+            { "title": "Inferencia", "text": "El modelo produce un resultado para una entrada nueva." }
+          ]
+        },
+        { "type": "visual", "kicker": "Resumen visual", "title": "Machine learning en una pantalla" },
+        {
+          "type": "check",
+          "title": "Llevalo a tu empresa",
+          "prompt": "Dá un ejemplo de machine learning en la distribuidora y mencioná qué datos necesitaría.",
+          "placeholder": "Podría usarse para... Necesitaría datos de...",
+          "minLength": 65,
+          "concepts": [
+            { "label": "predicción o patrón", "terms": ["predec", "estim", "clasific", "patrón", "probabilidad", "recomend"] },
+            { "label": "datos históricos", "terms": ["datos", "históric", "ventas", "clientes", "pedidos"] }
+          ],
+          "minConcepts": 2,
+          "question": "¿Cuál es un uso típico de machine learning?",
+          "options": ["Sumar el total de una factura", "Estimar la demanda del próximo mes", "Enviar un archivo a una hora fija"],
+          "answer": 1,
+          "explanation": "La demanda futura se estima a partir de patrones en datos históricos."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Deep learning",
+      "shortTitle": "Deep learning",
+      "minutes": 9,
+      "icon": "🧠",
+      "summary": "Redes neuronales profundas para lenguaje, imágenes, audio y patrones complejos.",
+      "visual": "assets/week-1/006-deep-learning.webp",
+      "pages": [
+        {
+          "type": "concept",
+          "kicker": "Dentro de machine learning",
+          "title": "Redes neuronales con muchas capas",
+          "body": [
+            "Deep learning es una rama de machine learning basada en redes neuronales profundas.",
+            "Sus capas aprenden representaciones cada vez más útiles. Esa capacidad impulsó grandes avances en lenguaje, visión, voz y sistemas multimodales."
+          ]
+        },
+        {
+          "type": "compare",
+          "kicker": "Relación",
+          "title": "De lo general a lo específico",
+          "columns": [
+            { "title": "IA", "text": "El campo general de sistemas que realizan tareas inteligentes." },
+            { "title": "Machine learning", "text": "Parte de la IA que aprende patrones desde datos." },
+            { "title": "Deep learning", "text": "Parte de machine learning que utiliza redes neuronales profundas." }
+          ]
+        },
+        { "type": "visual", "kicker": "Resumen visual", "title": "IA, machine learning y deep learning" },
+        {
+          "type": "check",
+          "title": "Explicá la relación",
+          "prompt": "¿Cómo se relacionan IA, machine learning y deep learning?",
+          "placeholder": "IA es... Dentro está... y deep learning...",
+          "minLength": 65,
+          "concepts": [
+            { "label": "IA es el campo general", "terms": ["campo", "general", "paraguas", "IA"] },
+            { "label": "ML aprende desde datos", "terms": ["machine", "datos", "patrones", "aprende"] },
+            { "label": "DL usa redes neuronales", "terms": ["deep", "redes", "neuronales", "capas"] }
+          ],
+          "minConcepts": 3,
+          "question": "¿Cuál afirmación es correcta?",
+          "options": ["Todo sistema de IA usa deep learning", "Deep learning es una parte de machine learning", "Machine learning y software tradicional son lo mismo"],
+          "answer": 1,
+          "explanation": "Deep learning es un enfoque dentro de machine learning; no toda IA lo utiliza."
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Inteligencia artificial generativa",
+      "shortTitle": "IA generativa",
+      "minutes": 10,
+      "icon": "✍️",
+      "summary": "Crear texto, imágenes, audio, video, código y datos estructurados.",
+      "visual": "assets/week-1/007-ia-generativa.webp",
+      "pages": [
+        {
+          "type": "concept",
+          "kicker": "Crear una salida nueva",
+          "title": "Generar desde patrones e instrucciones",
+          "body": [
+            "La IA generativa produce contenido nuevo a partir de patrones aprendidos, una instrucción y el contexto disponible.",
+            "Puede generar texto, imágenes, audio, video, código o estructuras como JSON."
+          ],
+          "callout": "Nuevo no significa verdadero, original ni correcto."
+        },
+        {
+          "type": "compare",
+          "kicker": "Fortalezas y límites",
+          "title": "Muy flexible, no determinista",
+          "columns": [
+            { "title": "Aporta", "text": "Borradores, interpretación, creatividad, transformación y síntesis." },
+            { "title": "Puede fallar", "text": "Inventar, omitir, mezclar datos o responder distinto ante la misma entrada." },
+            { "title": "Necesita", "text": "Buen contexto, ejemplos, validación y revisión proporcional al riesgo." }
+          ]
+        },
+        { "type": "visual", "kicker": "Resumen visual", "title": "IA generativa en una pantalla" },
+        {
+          "type": "check",
+          "title": "Usala con criterio",
+          "prompt": "Describí un uso útil de IA generativa en tu empresa y un control necesario.",
+          "placeholder": "La usaría para... Antes de usar el resultado, controlaría...",
+          "minLength": 70,
+          "concepts": [
+            { "label": "generar o interpretar", "terms": ["gener", "redact", "crear", "interpret", "resum"] },
+            { "label": "control o verificación", "terms": ["revis", "verific", "control", "aprobar", "compar"] }
+          ],
+          "minConcepts": 2,
+          "question": "¿Qué tarea es generativa?",
+          "options": ["Calcular un saldo con una fórmula", "Redactar un mensaje adaptado a un cliente", "Bloquear una venta sin stock"],
+          "answer": 1,
+          "explanation": "Redactar contenido nuevo a partir de contexto es una tarea generativa."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "IA predictiva e IA generativa",
+      "shortTitle": "Predecir o generar",
+      "minutes": 10,
+      "icon": "🔮",
+      "summary": "Anticipar una categoría o valor frente a producir contenido nuevo.",
+      "visual": "assets/week-1/008-predictiva-generativa.webp",
+      "pages": [
+        {
+          "type": "compare",
+          "kicker": "Diferencia central",
+          "title": "¿Qué es probable o qué puedo crear?",
+          "columns": [
+            { "title": "Predictiva", "text": "Estima una categoría, un valor, un riesgo o una probabilidad desde datos." },
+            { "title": "Generativa", "text": "Produce contenido nuevo desde una instrucción y un contexto." }
+          ]
+        },
+        {
+          "type": "example",
+          "kicker": "Trabajo conjunto",
+          "title": "Una campaña más inteligente",
+          "body": "Un modelo predictivo estima qué clientes tienen mayor probabilidad de comprar. Un modelo generativo redacta una variante de mensaje para cada segmento. Reglas exactas controlan stock, margen y límites de contacto.",
+          "callout": "Predictiva anticipa; generativa produce; las reglas controlan."
+        },
+        { "type": "visual", "kicker": "Resumen visual", "title": "Predictiva y generativa" },
+        {
+          "type": "check",
+          "title": "Comparalas",
+          "prompt": "Explicá la diferencia y dá un ejemplo empresarial de cada una.",
+          "placeholder": "La predictiva... Por ejemplo... La generativa... Por ejemplo...",
+          "minLength": 85,
+          "concepts": [
+            { "label": "predictiva anticipa", "terms": ["predict", "estim", "probab", "anticip", "clasific"] },
+            { "label": "generativa crea", "terms": ["gener", "crea", "produce", "redact"] },
+            { "label": "ejemplo", "terms": ["venta", "cliente", "mensaje", "demanda", "empresa", "distribuidora"] }
+          ],
+          "minConcepts": 3,
+          "question": "Estimar qué clientes podrían dejar de comprar es...",
+          "options": ["IA predictiva", "IA generativa", "Una automatización por horario"],
+          "answer": 0,
+          "explanation": "Se estima una probabilidad futura a partir de patrones en datos."
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Modelo, aplicación, herramienta y agente",
+      "shortTitle": "Las piezas",
+      "minutes": 12,
+      "icon": "🧩",
+      "summary": "Diferenciar el motor, la interfaz, las acciones externas y la coordinación.",
+      "visual": "assets/week-1/009-componentes.webp",
+      "pages": [
+        {
+          "type": "compare",
+          "kicker": "Cuatro piezas",
+          "title": "No son sinónimos",
+          "columns": [
+            { "title": "Modelo", "text": "El componente entrenado que transforma entradas en una salida." },
+            { "title": "Aplicación", "text": "El producto o interfaz con el que interactúa una persona." },
+            { "title": "Herramienta", "text": "Una capacidad externa: buscar, calcular, leer archivos o consultar datos." },
+            { "title": "Agente", "text": "Un sistema que decide y coordina pasos y herramientas para cumplir un objetivo." }
+          ]
+        },
+        {
+          "type": "steps",
+          "kicker": "Chat con catálogo",
+          "title": "Cómo colaboran",
+          "items": [
+            { "title": "Usuario", "text": "Escribe una necesidad en la aplicación." },
+            { "title": "Aplicación", "text": "Organiza la conversación y envía contexto." },
+            { "title": "Modelo", "text": "Interpreta la entrada y propone qué hacer." },
+            { "title": "Herramienta", "text": "Consulta el catálogo o calcula un valor exacto." },
+            { "title": "Aplicación", "text": "Muestra el resultado y permite revisarlo." }
+          ]
+        },
+        { "type": "visual", "kicker": "Resumen visual", "title": "El mapa de componentes" },
+        {
+          "type": "check",
+          "title": "Nombrá cada pieza",
+          "prompt": "En un chat que consulta stock, explicá cuál sería la aplicación, el modelo y la herramienta.",
+          "placeholder": "La aplicación sería... El modelo... La herramienta...",
+          "minLength": 85,
+          "concepts": [
+            { "label": "aplicación o interfaz", "terms": ["aplicación", "interfaz", "chat", "pantalla"] },
+            { "label": "modelo interpreta", "terms": ["modelo", "interpret", "genera", "procesa"] },
+            { "label": "herramienta actúa o consulta", "terms": ["herramienta", "consulta", "stock", "base", "catálogo", "calcula"] }
+          ],
+          "minConcepts": 3,
+          "question": "¿Qué pieza consulta una base de datos?",
+          "options": ["Una herramienta", "La pantalla del teléfono", "El historial visual"],
+          "answer": 0,
+          "explanation": "La consulta externa es una herramienta que el sistema puede utilizar."
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Modelos abiertos y cerrados",
+      "shortTitle": "Abiertos y cerrados",
+      "minutes": 10,
+      "icon": "🔓",
+      "summary": "Acceso, control, facilidad, costos y responsabilidad técnica.",
+      "visual": "assets/week-1/010-modelos-abiertos-cerrados.webp",
+      "pages": [
+        {
+          "type": "concept",
+          "kicker": "No es blanco o negro",
+          "title": "Distintos grados de acceso",
+          "body": [
+            "Un modelo puede abrir sus pesos, código o documentación en distintos grados. La licencia define qué usos están permitidos.",
+            "Un modelo cerrado suele consumirse como servicio: el proveedor gestiona la infraestructura y limita el acceso interno."
+          ]
+        },
+        {
+          "type": "compare",
+          "kicker": "Trade-off",
+          "title": "Control frente a simplicidad",
+          "columns": [
+            { "title": "Más abierto", "text": "Mayor control y personalización; también más implementación, mantenimiento y responsabilidad." },
+            { "title": "Más cerrado", "text": "Inicio rápido y servicio gestionado; también más dependencia y menos control interno." }
+          ]
+        },
+        { "type": "visual", "kicker": "Resumen visual", "title": "Modelos abiertos y cerrados" },
+        {
+          "type": "check",
+          "title": "Elegí según el contexto",
+          "prompt": "¿Cuándo elegirías un modelo cerrado y qué riesgo revisarías?",
+          "placeholder": "Elegiría uno cerrado cuando... Revisaría...",
+          "minLength": 65,
+          "concepts": [
+            { "label": "facilidad o servicio", "terms": ["rápid", "fácil", "servicio", "infraestructura", "mantenimiento"] },
+            { "label": "dependencia, privacidad o costo", "terms": ["dependencia", "proveedor", "privacidad", "costo", "control", "datos"] }
+          ],
+          "minConcepts": 2,
+          "question": "¿Cuál es un beneficio habitual de un modelo más abierto?",
+          "options": ["No requiere mantenimiento", "Mayor control y personalización", "Siempre es más preciso"],
+          "answer": 1,
+          "explanation": "El acceso adicional puede dar control y personalización, pero no garantiza precisión ni elimina el trabajo técnico."
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Sistemas multimodales",
+      "shortTitle": "Multimodalidad",
+      "minutes": 10,
+      "icon": "👁️",
+      "summary": "Combinar texto, imagen, audio, video y datos en un mismo sistema.",
+      "visual": "assets/week-1/011-multimodalidad.webp",
+      "pages": [
+        {
+          "type": "concept",
+          "kicker": "Más de una modalidad",
+          "title": "Distintos tipos de información",
+          "body": [
+            "Un sistema multimodal puede recibir, interpretar o generar más de un tipo de contenido.",
+            "Puede combinar texto, imágenes, audio, video, documentos y datos estructurados para comprender mejor una situación."
+          ],
+          "callout": "Más modalidades agregan contexto, pero también complejidad y nuevas fuentes de error."
+        },
+        {
+          "type": "example",
+          "kicker": "Aplicación real",
+          "title": "Factura, audio y catálogo",
+          "body": "Un sistema recibe una foto de factura, extrae texto con OCR, escucha una aclaración en audio y compara los productos contra el catálogo. Cada modalidad debe conservar su fuente para poder revisar el resultado.",
+          "callout": "La trazabilidad importa: hay que saber de dónde salió cada dato."
+        },
+        { "type": "visual", "kicker": "Resumen visual", "title": "Un sistema multimodal" },
+        {
+          "type": "check",
+          "title": "Diseñá un caso multimodal",
+          "prompt": "Proponé un uso multimodal para la distribuidora y mencioná dos tipos de entrada.",
+          "placeholder": "El sistema recibiría... y... para...",
+          "minLength": 65,
+          "concepts": [
+            { "label": "dos modalidades", "terms": ["texto", "imagen", "foto", "audio", "video", "documento", "datos"] },
+            { "label": "objetivo", "terms": ["para", "pedido", "factura", "catálogo", "producto", "control"] }
+          ],
+          "minConcepts": 2,
+          "question": "¿Cuál es un caso multimodal?",
+          "options": ["Sumar dos columnas", "Interpretar una foto de factura junto con una aclaración en audio", "Enviar un recordatorio fijo"],
+          "answer": 1,
+          "explanation": "Combina imagen/documento y audio dentro de la misma tarea."
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Cómo elegir si un problema necesita IA",
+      "shortTitle": "Cuándo usar IA",
+      "minutes": 13,
+      "icon": "⚖️",
+      "summary": "Empezar por el problema y elegir la solución más simple que funcione.",
+      "visual": "assets/week-1/012-cuando-usar-ia.webp",
+      "pages": [
+        {
+          "type": "steps",
+          "kicker": "Método de decisión",
+          "title": "Problema antes que herramienta",
+          "items": [
+            { "title": "Definí el resultado", "text": "Qué debe ocurrir y cómo sabrás si está bien." },
+            { "title": "Revisá la variabilidad", "text": "Si hay lenguaje, imágenes, ambigüedad o patrones." },
+            { "title": "Probá lo más simple", "text": "Fórmula, planilla, base de datos o automatización." },
+            { "title": "Medí riesgo y beneficio", "text": "Impacto, datos, costo, mantenimiento y gravedad del error." }
+          ]
+        },
+        {
+          "type": "compare",
+          "kicker": "Señales",
+          "title": "Cuándo aporta y cuándo sobra",
+          "columns": [
+            { "title": "Puede aportar IA", "text": "Lenguaje variable, imágenes, predicción, clasificación o patrones difíciles de escribir." },
+            { "title": "Suelen alcanzar reglas", "text": "Cálculos exactos, condiciones claras, validaciones simples y pasos fijos." }
+          ]
+        },
+        { "type": "visual", "kicker": "Resumen visual", "title": "Decidir con criterio" },
+        {
+          "type": "check",
+          "title": "Decidí y justificá",
+          "prompt": "Elegí un proceso donde no usarías IA y explicá por qué una solución más simple alcanza.",
+          "placeholder": "No usaría IA para... porque... Usaría...",
+          "minLength": 70,
+          "concepts": [
+            { "label": "proceso concreto", "terms": ["saldo", "total", "comisión", "horario", "stock", "precio", "factura", "empresa"] },
+            { "label": "regla o solución simple", "terms": ["regla", "fórmula", "Excel", "automatización", "base", "exact"] },
+            { "label": "justificación", "terms": ["porque", "alcanza", "no necesita", "comprobar", "definid"] }
+          ],
+          "minConcepts": 3,
+          "question": "¿Qué conviene hacer primero al evaluar IA?",
+          "options": ["Elegir el modelo más nuevo", "Definir el problema y el resultado esperado", "Automatizar todo el proceso"],
+          "answer": 1,
+          "explanation": "La tecnología se elige después de entender el problema, los datos, el riesgo y la forma de comprobar el resultado."
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Riesgos y limitaciones básicas",
+      "shortTitle": "Riesgos",
+      "minutes": 13,
+      "icon": "🛡️",
+      "summary": "Alucinaciones, sesgos, privacidad, mala entrada y automatización excesiva.",
+      "visual": "assets/week-1/013-riesgos.webp",
+      "pages": [
+        {
+          "type": "compare",
+          "kicker": "Mapa de riesgos",
+          "title": "Una salida útil también puede fallar",
+          "columns": [
+            { "title": "Invención u omisión", "text": "Puede agregar datos falsos o dejar afuera información relevante." },
+            { "title": "Datos y sesgos", "text": "Una entrada mala, incompleta o sesgada degrada la respuesta." },
+            { "title": "Privacidad", "text": "No todo dato empresarial o personal debe enviarse a un proveedor." },
+            { "title": "Acciones", "text": "Automatizar una respuesta incorrecta multiplica su impacto." }
+          ]
+        },
+        {
+          "type": "steps",
+          "kicker": "Control inicial",
+          "title": "Reducí el riesgo",
+          "items": [
+            { "title": "Limitá el uso", "text": "Definí para qué sirve y para qué no." },
+            { "title": "Revisá los datos", "text": "Calidad, actualidad, permisos y fuente." },
+            { "title": "Probá casos difíciles", "text": "Ambigüedades, faltantes, errores y entradas maliciosas." },
+            { "title": "Mantené revisión humana", "text": "Especialmente ante dinero, clientes, privacidad o acciones irreversibles." }
+          ]
+        },
+        { "type": "visual", "kicker": "Resumen visual", "title": "Riesgos y controles" },
+        {
+          "type": "check",
+          "title": "Pensá antes de automatizar",
+          "prompt": "Nombrá dos riesgos del procesador de pedidos y un control para reducirlos.",
+          "placeholder": "Un riesgo es... Otro... Para reducirlos...",
+          "minLength": 85,
+          "concepts": [
+            { "label": "riesgo de error", "terms": ["invent", "omit", "error", "ambigu", "equivoc", "producto", "cantidad"] },
+            { "label": "privacidad o datos", "terms": ["privacidad", "datos", "cliente", "sensible", "calidad", "desactual"] },
+            { "label": "control", "terms": ["revis", "verific", "aprobar", "humana", "prueba", "catálogo", "marcar"] }
+          ],
+          "minConcepts": 3,
+          "question": "¿Qué resultado debería requerir revisión humana?",
+          "options": ["Una sugerencia de borrador", "Un pedido ambiguo que afectará stock y facturación", "El color del modo oscuro"],
+          "answer": 1,
+          "explanation": "Una ambigüedad que puede producir acciones comerciales o contables necesita revisión antes de confirmarse."
+        }
+      ]
+    }
+  ],
+  "practice": {
+    "title": "Laboratorio: elegí la solución",
+    "description": "Clasificá cada proceso por su necesidad principal. Después defendé dos prioridades para la distribuidora.",
+    "visual": "assets/week-1/practica-distribuidora.webp",
+    "choices": [
+      { "id": "rules", "label": "Reglas exactas" },
+      { "id": "automation", "label": "Automatización" },
+      { "id": "predictive", "label": "IA predictiva" },
+      { "id": "generative", "label": "IA generativa" },
+      { "id": "hybrid", "label": "Solución híbrida" },
+      { "id": "database", "label": "Base de datos" }
+    ],
+    "cases": [
+      { "id": "balances", "text": "Sumar facturas, restar pagos y obtener el saldo", "answers": ["rules"], "why": "Es un cálculo exacto y comprobable." },
+      { "id": "forecast", "text": "Estimar ventas del próximo mes", "answers": ["predictive"], "why": "Se estima un valor futuro desde patrones históricos." },
+      { "id": "catalog", "text": "Enviar el catálogo todos los lunes a las 9", "answers": ["automation"], "why": "Los pasos y el horario están definidos." },
+      { "id": "orders", "text": "Leer un pedido con abreviaturas y calcular el total", "answers": ["hybrid"], "why": "La IA interpreta; catálogo y reglas verifican y calculan." },
+      { "id": "save", "text": "Guardar pedidos y relacionarlos con clientes y productos", "answers": ["database"], "why": "La necesidad central es estructurar y relacionar información." },
+      { "id": "ad", "text": "Crear una imagen o texto publicitario", "answers": ["generative"], "why": "Se produce contenido nuevo." },
+      { "id": "commission", "text": "Calcular una comisión con porcentaje fijo", "answers": ["rules"], "why": "La fórmula está definida y debe ser exacta." },
+      { "id": "churn", "text": "Detectar clientes que podrían dejar de comprar", "answers": ["predictive"], "why": "Se estima una probabilidad desde el comportamiento histórico." },
+      { "id": "supplier", "text": "Leer listas de proveedores, comparar fechas y elegir el precio vigente", "answers": ["hybrid"], "why": "La IA extrae; reglas de vigencia deciden; una persona revisa conflictos." },
+      { "id": "support", "text": "Redactar una respuesta adaptada al tipo de cliente", "answers": ["generative"], "why": "Se crea texto nuevo a partir de contexto." }
+    ],
+    "reflectionPrompt": "Elegí dos procesos prioritarios para mejorar y uno donde no usarías IA. Justificá las tres decisiones.",
+    "reflectionPlaceholder": "Prioridad 1... Prioridad 2... No usaría IA en... porque...",
+    "minReflectionLength": 120,
+    "passScore": 80
+  },
+  "finalQuiz": {
+    "title": "Evaluación final",
+    "description": "Respondé sin volver a las lecciones. Necesitás 16 de 20 respuestas correctas para aprobar.",
+    "passScore": 80,
+    "questions": [
+      { "text": "¿Qué describe mejor a la inteligencia artificial?", "options": ["Una máquina consciente", "Sistemas que interpretan, predicen, clasifican o generan", "Cualquier programa automático"], "answer": 1 },
+      { "text": "¿Por qué una calculadora no necesita IA para sumar?", "options": ["Porque usa una regla exacta", "Porque no tiene internet", "Porque es demasiado rápida"], "answer": 0 },
+      { "text": "¿Qué diferencia a una automatización?", "options": ["Siempre aprende", "Coordina pasos y condiciones definidos", "Siempre genera texto"], "answer": 1 },
+      { "text": "¿Qué es una solución híbrida?", "options": ["Dos modelos idénticos", "IA combinada con reglas, datos y revisión", "Una aplicación sin usuarios"], "answer": 1 },
+      { "text": "Machine learning aprende principalmente...", "options": ["Patrones desde datos", "Emociones humanas", "Una fórmula escrita para cada caso"], "answer": 0 },
+      { "text": "Deep learning es...", "options": ["Toda la IA", "Una parte de machine learning basada en redes neuronales profundas", "Una base de datos"], "answer": 1 },
+      { "text": "La IA generativa...", "options": ["Solo busca datos", "Produce contenido nuevo", "Garantiza verdad"], "answer": 1 },
+      { "text": "La IA predictiva busca...", "options": ["Estimar una categoría, valor o probabilidad", "Crear una imagen", "Guardar archivos"], "answer": 0 },
+      { "text": "¿Qué es un modelo?", "options": ["El componente entrenado que transforma entradas en salidas", "La pantalla de una app", "Un botón"], "answer": 0 },
+      { "text": "¿Qué es una aplicación?", "options": ["Solo el modelo", "El producto o interfaz que integra componentes", "Una fórmula"], "answer": 1 },
+      { "text": "¿Qué hace una herramienta?", "options": ["Realiza una acción externa como buscar o consultar datos", "Entrena siempre el modelo", "Reemplaza al usuario"], "answer": 0 },
+      { "text": "¿Qué caracteriza a un agente?", "options": ["Solo responde una vez", "Coordina pasos y herramientas para un objetivo", "No tiene límites"], "answer": 1 },
+      { "text": "Un modelo más abierto suele ofrecer...", "options": ["Más acceso y control", "Cero mantenimiento", "Precisión garantizada"], "answer": 0 },
+      { "text": "Un modelo cerrado suele implicar...", "options": ["Servicio más gestionado y mayor dependencia", "Acceso total a los pesos", "Uso sin condiciones"], "answer": 0 },
+      { "text": "¿Qué significa multimodal?", "options": ["Que nunca se equivoca", "Que trabaja con varios tipos de información", "Que usa muchos usuarios"], "answer": 1 },
+      { "text": "¿Cuándo suele aportar IA?", "options": ["Cuando hay lenguaje o patrones difíciles de expresar con reglas", "Para todo cálculo exacto", "Para reemplazar cualquier base de datos"], "answer": 0 },
+      { "text": "¿Qué conviene hacer antes de elegir un modelo?", "options": ["Definir problema, datos, resultado y riesgo", "Comprar la opción más cara", "Automatizar todo"], "answer": 0 },
+      { "text": "Una alucinación es...", "options": ["Una respuesta inventada o no sustentada", "Una actualización", "Un dato cifrado"], "answer": 0 },
+      { "text": "¿Por qué importa la calidad de entrada?", "options": ["Porque datos malos pueden producir resultados malos", "Porque elimina todo riesgo", "Porque reemplaza la evaluación"], "answer": 0 },
+      { "text": "¿Cuándo es especialmente importante la revisión humana?", "options": ["Ante acciones críticas, ambiguas o irreversibles", "Solo al cambiar colores", "Nunca, si la respuesta suena segura"], "answer": 0 }
+    ]
+  }
+}

@@ -3,45 +3,53 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#f6f5f1">
+  <meta name="theme-color" content="#f6f2e8">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-title" content="Aprender IA">
-  <meta name="description" content="Miniapp de estudio de Inteligencia Artificial para sesiones cortas desde el celular.">
+  <meta name="description" content="Semana 1 de Aprender IA: microlecciones, práctica y evaluación aplicadas a El Mayorista del Sur.">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/icon.svg">
   <link rel="stylesheet" href="styles.css">
-  <title>Aprender IA</title>
+  <title>Aprender IA · Semana 1</title>
 </head>
 <body>
   <div class="app-shell">
     <header class="topbar">
-      <div>
-        <p class="eyebrow">PLAN PERSONAL · 16 SEMANAS</p>
-        <h1>Aprender IA</h1>
-      </div>
-      <button class="icon-button" id="themeButton" aria-label="Cambiar tema" title="Cambiar tema">
-        <span aria-hidden="true">◐</span>
+      <button class="brand" data-route="home" aria-label="Ir al inicio">
+        <span class="brand-mark" aria-hidden="true">IA</span>
+        <span>
+          <small>PLAN PERSONAL</small>
+          <strong>Aprender IA</strong>
+        </span>
+      </button>
+      <button class="icon-button" id="themeButton" aria-label="Cambiar apariencia">
+        <span id="themeIcon" aria-hidden="true">◐</span>
       </button>
     </header>
 
-    <main id="app" tabindex="-1"></main>
+    <main id="app" tabindex="-1">
+      <section class="loading-card" aria-live="polite">
+        <span class="loading-dot"></span>
+        <p>Preparando tu Semana 1…</p>
+      </section>
+    </main>
 
     <nav class="bottom-nav" aria-label="Navegación principal">
-      <button class="nav-item is-active" data-route="home" aria-label="Inicio">
+      <button class="nav-item is-active" data-route="home">
         <span class="nav-icon" aria-hidden="true">⌂</span>
         <span>Inicio</span>
       </button>
-      <button class="nav-item" data-route="topics" aria-label="Temas">
-        <span class="nav-icon" aria-hidden="true">▤</span>
-        <span>Temas</span>
+      <button class="nav-item" data-route="path">
+        <span class="nav-icon" aria-hidden="true">☷</span>
+        <span>Ruta</span>
       </button>
-      <button class="nav-item" data-route="favorites" aria-label="Favoritos">
-        <span class="nav-icon" aria-hidden="true">☆</span>
-        <span>Favoritos</span>
+      <button class="nav-item" data-route="practice">
+        <span class="nav-icon" aria-hidden="true">◎</span>
+        <span>Práctica</span>
       </button>
-      <button class="nav-item" data-route="progress" aria-label="Progreso">
+      <button class="nav-item" data-route="progress">
         <span class="nav-icon" aria-hidden="true">◔</span>
         <span>Progreso</span>
       </button>
@@ -49,22 +57,23 @@
   </div>
 
   <dialog id="lessonDialog" class="lesson-dialog">
-    <div class="lesson-header">
-      <button class="icon-button" id="closeLesson" aria-label="Cerrar tema">←</button>
+    <div class="story-progress" id="storyProgress" aria-label="Progreso dentro de la lección"></div>
+    <header class="lesson-header">
+      <button class="icon-button lesson-close" id="closeLesson" aria-label="Cerrar lección">←</button>
       <div class="lesson-heading">
         <p id="lessonKicker" class="eyebrow"></p>
         <h2 id="lessonTitle"></h2>
       </div>
-      <button class="icon-button" id="favoriteLesson" aria-label="Agregar a favoritos">☆</button>
-    </div>
+      <button class="icon-button" id="favoriteLesson" aria-label="Guardar en favoritos">☆</button>
+    </header>
 
     <div id="lessonContent" class="lesson-content"></div>
 
-    <div class="lesson-footer">
+    <footer class="lesson-footer">
       <button class="secondary-button" id="previousPage">Anterior</button>
       <span id="pageIndicator" class="page-indicator"></span>
       <button class="primary-button" id="nextPage">Siguiente</button>
-    </div>
+    </footer>
   </dialog>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>

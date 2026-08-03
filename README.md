@@ -1,47 +1,30 @@
 # Aprender IA
 
-Miniapp web instalable para estudiar el plan de Inteligencia Artificial desde el iPhone.
+Aplicación web instalable para estudiar inteligencia artificial desde el iPhone mediante sesiones breves y práctica aplicada a El Mayorista del Sur.
 
-## Primera versión
+## Semana 1
 
-Incluye:
+La primera semana está lista para usar e incluye:
 
-- navegación por los temas 5 al 13 de la Semana 1;
-- lecciones breves para estudiar en pocos minutos;
-- botón **Continuar estudiando**;
-- progreso guardado en el dispositivo;
-- favoritos;
-- modo claro, oscuro o automático;
-- diseño vertical optimizado para celular;
-- instalación como app desde Safari;
-- funcionamiento sin conexión después de la primera carga.
+- 13 microlecciones sobre el mapa general de la IA;
+- navegación tipo historias, con gestos laterales y progreso dentro de cada lección;
+- explicación escrita y comprobación conceptual antes de aprobar cada tema;
+- ejemplos específicos de la distribuidora;
+- 10 resúmenes visuales seleccionados y optimizados para celular;
+- laboratorio de clasificación de procesos;
+- evaluación final de 20 preguntas, con aprobación a partir del 80%;
+- progreso, respuestas, favoritos y apariencia guardados en el dispositivo;
+- modo claro, oscuro y automático;
+- instalación como PWA y funcionamiento sin conexión;
+- publicación automática mediante GitHub Pages.
 
-## Imágenes educativas
+## Criterio de progreso
 
-La interfaz ya funciona con tarjetas de lectura. Las imágenes generadas se pueden incorporar después dentro de esta estructura:
-
-```text
-assets/semana-01/
-  tema-05-machine-learning/
-  tema-06-deep-learning/
-  tema-07-ia-generativa/
-  tema-08-predictiva-generativa/
-  tema-09-modelos-aplicaciones-herramientas/
-  tema-10-modelos-abiertos-cerrados/
-  tema-11-sistemas-multimodales/
-  tema-12-cuando-usar-ia/
-  tema-13-riesgos-limitaciones/
-```
+Abrir una lección no aumenta el porcentaje. Un tema se considera demostrado cuando la explicación contiene las ideas centrales y la respuesta de comprobación es correcta. La Semana 1 se completa al aprobar las 13 lecciones, el laboratorio y la evaluación final.
 
 ## Instalar en iPhone
 
-Una vez publicada la web:
-
-1. Abrirla en Safari.
+1. Abrir la página publicada en Safari.
 2. Tocar **Compartir**.
 3. Elegir **Añadir a pantalla de inicio**.
 4. Activar **Abrir como app**.
-
-## Publicación
-
-Es una aplicación estática. Puede publicarse con GitHub Pages, Cloudflare Pages, Netlify o Vercel.
